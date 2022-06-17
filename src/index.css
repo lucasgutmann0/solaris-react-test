@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* data table customize  */
+
+.kWAsOx {
+  font-weight: 600 !important;  /* texto titulo tabla */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.jVeafb {
+  font-weight: 400 !important;  /* texto principal */
+}
+
+.TpgDh { /* TEXTO TITUTLO COLUMNA*/
+  font-weight: 500 !important;
+  font-size: 15px !important;
+}
+
+
+@layer components {
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.4');
+    box-shadow: theme('boxShadow.xl');
+  }
+
+  .cardHeader {
+    background-color: #b5b5b5;
+    padding: theme('spacing.4');
+    border-radius: theme('borderRadius.lg');
+  }
+
+  .cardTitle {
+    color: aliceblue;
+  }
+
+  .listItem {
+    @apply px-10 text-gray-800;
+  }
+
+  .listItem--head {
+    @apply px-10 text-black;
+  }
+
+  .cardBody {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.xl');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  }
+
+  .formLabel {
+    @apply block text-center text-gray-500 font-bold pb-2 md:mb-0
+  }
+
+  .formLabel--left-noPadding {
+    @apply block text-left text-gray-700 font-semibold md:mb-0
+  }
+
+  .formLabel--left {
+    @apply block text-left text-gray-500 font-bold mb-1 md:mb-0 pl-5
+  }
+
+  .formLabel--right {
+    @apply block text-right text-gray-500 font-bold mb-1 md:mb-0 pr-5
+  }
+
+  .formInput {
+    @apply bg-gray-200 text-center appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500
+  }
+
+  .formButton {
+    @apply bg-blue-500 hover:bg-blue-400 focus:drop-shadow-sm focus:outline-none text-white font-bold py-2 px-4 rounded w-40
+  }
 }
